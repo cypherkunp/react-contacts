@@ -8,37 +8,47 @@ import CreateContact from '../../components/create-contact/create-contact.compoe
 import Menu from '../../components/menu/menu.component';
 
 class ContactsPage extends Component {
-    state = {
-        contacts: []
-    };
+  state = {
+    contacts: null
+  };
 
-    componentDidMount() {
-        this.setState({ contacts });
-    }
+  componentDidMount() {
+    this.setState({ contacts });
+  }
 
-    render() {
-        return (
-            <div className="contacts-page">
-                <div className="labels-section">
-                    <div className="create-contact">
-                        <CreateContact />
-                    </div>
-                    <div className="tag-list">
-                        <TagList />
-                    </div>
-                </div>
-                <div className="contacts-section">
-                    <section class="section-banner">
-                        <Menu />
-                    </section>
+  handleDelete = contact => {
+    let contacts = [...this.state.contacts];
+    contacts = contacts.filter(c => c._id !== contact._id);
+    this.setState({ contacts });
+  };
 
-                    <div className="contact-table">
-                        <TableView></TableView>
-                    </div>
-                </div>
+  render() {
+    const { contacts } = this.state;
+
+    if (!contacts) return <h1>Loading...</h1>;
+    else
+      return (
+        <div className="contacts-page">
+          <div className="labels-section">
+            <div className="create-contact">
+              <CreateContact />
             </div>
-        );
-    }
+            <div className="tag-list">
+              <TagList />
+            </div>
+          </div>
+          <div className="contacts-section">
+            <section className="section-banner">
+              <Menu />
+            </section>
+
+            <div className="contact-table">
+              <TableView data={contacts} onDelete={this.handleDelete} />
+            </div>
+          </div>
+        </div>
+      );
+  }
 }
 
 export default ContactsPage;
