@@ -1,0 +1,31 @@
+.contacts-page {
+    height: 93vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.labels-section {
+    min-width: 10vw;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.labels-section .create-contact {
+    margin: 20px 0px;
+}
+
+.labels-section .tag-list {
+    margin: 20px 0px 0px 20px;
+    display: inline-block;
+}
+
+.contacts-section {
+    width: 90vw;
+}
+
+.contacts-section .section-banner {
+    margin: 10px 20px;
+}
+.contacts-section .contact-table {
+    margin: 10px 20px;
+}
