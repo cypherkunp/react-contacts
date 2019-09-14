@@ -1,0 +1,13 @@
+.tag-list-header {
+  text-align: left;
+  font-size: 20px;
+}
+
+.tag-list-header .tag-list-header-group {
+  display: inline-block; /* change the display type           */
+  margin: 0px 5px; /* apply the needed vertical margins */
+}
+
+.tag-list-group {
+  margin: 10px 0px;
+}

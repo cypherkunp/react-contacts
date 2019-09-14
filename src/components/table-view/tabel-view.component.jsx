@@ -6,6 +6,8 @@ import Table from '../common-components/table/table.component';
 import Delete from './../common-components/delete/delete.component';
 
 const TableView = ({ data, onDelete }) => {
+  if (!(data && data.length)) return null;
+
   const capitalizeFirstLetter = lowerString => `${lowerString.charAt(0).toUpperCase()}${lowerString.substring(1)}`;
   const [_id, ...columnKeys] = Object.keys(data[0]);
 

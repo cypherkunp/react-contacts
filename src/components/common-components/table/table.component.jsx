@@ -24,13 +24,15 @@ const Table = ({ columnData, rowData }) => {
         </tr>
       </thead>
       <tbody>
-        {rowData.map(row => (
-          <tr key={row._id}>
-            {columnData.map((column, columnIndex) => (
-              <td key={createKey(row._id, columnIndex)}>{renderCell(row, column)}</td>
-            ))}
-          </tr>
-        ))}
+        {rowData
+          ? rowData.map(row => (
+              <tr key={row._id}>
+                {columnData.map((column, columnIndex) => (
+                  <td key={createKey(row._id, columnIndex)}>{renderCell(row, column)}</td>
+                ))}
+              </tr>
+            ))
+          : null}
       </tbody>
     </table>
   );

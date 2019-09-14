@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Menu = () => {
+const Menu = ({ value, onSearch }) => {
   return (
     <div className="alert alert-light" role="alert">
       <div className="input-group">
@@ -17,6 +17,8 @@ const Menu = () => {
           placeholder="Search"
           aria-label="Search"
           aria-describedby="search-icon"
+          value={value}
+          onChange={e => onSearch(e.currentTarget.value)}
         />
       </div>
     </div>

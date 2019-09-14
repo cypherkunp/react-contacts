@@ -5,8 +5,9 @@ export default [
     address: 'New Kalyani Nagar',
     email: 'devvratshukla@gmail.com',
     website: 'devvratshukla.github.io',
+    phone: '9890763747',
     company: 'PTC Inc',
-    Notes: 'Notes',
+    notes: 'Notes',
     label: ''
   },
   {
@@ -15,8 +16,9 @@ export default [
     address: 'New Kalyani Nagar',
     email: 'stevejobs@gmail.com',
     website: 'stevejobs.github.io',
+    phone: '9890763747',
     company: 'Apple Inc',
-    Notes: 'Notes',
+    notes: 'Notes',
     label: ''
   },
   {
@@ -25,8 +27,9 @@ export default [
     address: 'New Kalyani Nagar',
     email: 'stevewoz@gmail.com',
     website: 'stevewoz.github.io',
+    phone: '9890763747',
     company: 'Apple Inc',
-    Notes: 'Notes',
+    notes: 'Notes',
     label: ''
   },
   {
@@ -35,8 +38,9 @@ export default [
     address: 'New Kalyani Nagar',
     email: 'billgates@gmail.com',
     website: 'billgates.github.io',
+    phone: '9890763747',
     company: 'Microsoft Inc',
-    Notes: 'Notes',
+    notes: 'Notes',
     label: ''
   }
 ];
