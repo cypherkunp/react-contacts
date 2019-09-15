@@ -3,9 +3,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Table from '../common-components/table/table.component';
-import Delete from './../common-components/delete/delete.component';
+import Delete from '../common-components/delete/delete.component';
 
-const TableView = ({ data, onDelete }) => {
+const ContactsViewTable = ({ data, onDelete }) => {
   if (!(data && data.length)) return null;
 
   const capitalizeFirstLetter = lowerString => `${lowerString.charAt(0).toUpperCase()}${lowerString.substring(1)}`;
@@ -49,4 +49,4 @@ const TableView = ({ data, onDelete }) => {
   return <Table rowData={data} columnData={columnConfig} />;
 };
 
-export default TableView;
+export default ContactsViewTable;

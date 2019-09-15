@@ -1,14 +1,13 @@
-import { ReactComponent as Logo } from '../../assets/phone-book.svg';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
-import './header.styles.css';
+import './app-header.styles.css';
 
-const Header = ({ currentUser }) => {
+const AppHeader = ({ currentUser }) => {
   return (
-    <header className="navbar navbar-dark bg-dark app-header">
+    <div className="navbar navbar-dark bg-dark app-header">
       <Link className="navbar-brand" to="/">
         <FontAwesomeIcon icon={faAddressBook} style={{ color: 'white', height: 32, width: 32 }} />
       </Link>
@@ -29,8 +28,8 @@ const Header = ({ currentUser }) => {
           </button>
         )}
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+export default AppHeader;

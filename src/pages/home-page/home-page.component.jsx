@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import './contacts-page.styles.css';
-import contacts from './default-contacts';
-import tagList from './default-taglist';
+import './home-page.styles.css';
+
+import { getLabelsWithCount } from '../../modal/contact-labels';
+import { getContacts, deleteContact } from '../../modal/contact-data';
 
 import TagList from '../../components/tag-list/tag-list.component';
-import CreateContact from '../../components/create-contact/create-contact.compoent';
 import ContactsView from '../../components/contacts-view/contacts-view.components';
+import CustomLink from '../../components/common-components/custom-link/custom-link.compoent';
 
-class ContactsPage extends Component {
+class HomePage extends Component {
   state = {
     contacts: null,
     tagList: null
   };
 
   componentDidMount() {
-    this.setState({ contacts, tagList });
+    this.setState({ contacts: getContacts(), tagList: getLabelsWithCount() });
   }
 
   handleDelete = contact => {
     let contacts = [...this.state.contacts];
     contacts = contacts.filter(c => c._id !== contact._id);
+    deleteContact(contact);
     this.setState({ contacts });
   };
 
@@ -32,7 +34,7 @@ class ContactsPage extends Component {
         <div className="contacts-page">
           <div className="labels-section">
             <div className="create-contact">
-              <CreateContact />
+              <CustomLink to="/create">Create Contact</CustomLink>
             </div>
             <div className="tag-list">
               <TagList data={tagList} />
@@ -46,4 +48,4 @@ class ContactsPage extends Component {
   }
 }
 
-export default ContactsPage;
+export default HomePage;

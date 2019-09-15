@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Menu = ({ value, onSearch }) => {
+const ContactsViewTableMenu = ({ value, onSearch }) => {
   return (
     <div className="alert alert-light" role="alert">
       <div className="input-group">
@@ -25,4 +25,4 @@ const Menu = ({ value, onSearch }) => {
   );
 };
 
-export default Menu;
+export default ContactsViewTableMenu;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import Menu from '../../components/menu/menu.component';
-import TableView from './../../components/table-view/tabel-view.component';
+import ContactsViewTableMenu from '../contacts-view-table-menu/contacts-view-table-menu.component';
+import ContactsViewTable from './../contacts-view-table/contacts-view-table.component';
 
 class ContactsView extends Component {
   state = { contacts: null, searchQuery: '' };
@@ -43,10 +43,10 @@ class ContactsView extends Component {
     return (
       <React.Fragment>
         <section className="section-banner">
-          <Menu value={searchQuery} onSearch={this.handleSearch} />
+          <ContactsViewTableMenu value={searchQuery} onSearch={this.handleSearch} />
         </section>
         <section className="contact-table">
-          <TableView data={filteredContacts} onDelete={onDelete} />
+          <ContactsViewTable data={filteredContacts} onDelete={onDelete} />
         </section>
       </React.Fragment>
     );

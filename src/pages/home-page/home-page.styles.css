@@ -5,7 +5,8 @@
 }
 
 .labels-section {
-  min-width: 15vw;
+  width: 15vw;
+  min-width: 280px;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
