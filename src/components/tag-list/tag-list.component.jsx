@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTags, faTag } from '@fortawesome/free-solid-svg-icons';
 import './tag-list.styles.css';
 
-const TagList = ({ data: tagListData }) => {
-  if (!tagListData) return null;
-  const totalLabels = tagListData.length;
+const TagList = ({ data: labelsData }) => {
+  if (!labelsData) return null;
+  const totalLabels = labelsData.length;
 
   return (
     <React.Fragment>
@@ -18,8 +18,8 @@ const TagList = ({ data: tagListData }) => {
       </div>
       <div className="tag-list-group">
         <ul className="list-group">
-          {tagListData.map(tag => (
-            <li className="list-group-item d-flex justify-content-between align-items-start border-0 ">
+          {labelsData.map(tag => (
+            <li key={tag.label} className="list-group-item d-flex justify-content-between align-items-start border-0 ">
               <FontAwesomeIcon icon={faTag} style={{ height: 16, width: 16 }} /> {tag.label}
               <span className="badge badge-primary badge-pill">{tag.count}</span>
             </li>

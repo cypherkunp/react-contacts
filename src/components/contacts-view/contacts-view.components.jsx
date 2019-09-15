@@ -28,7 +28,8 @@ class ContactsView extends Component {
         contact.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
         contact.notes.toLowerCase().includes(searchQuery.toLowerCase()) ||
         contact.website.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        contact.phone.includes(searchQuery.toLowerCase())
+        contact.phone.includes(searchQuery.toLowerCase()) ||
+        contact.label.toLowerCase().includes(searchQuery.toLowerCase())
     );
   };
 

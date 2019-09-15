@@ -5,7 +5,7 @@ const TextArea = ({ label, name, rows, onChange }) => {
   return (
     <>
       <label htmlFor={name}>{label}</label>
-      <textarea className="form-control" id={name} rows={rows} onChange={onChange}></textarea>
+      <textarea className="form-control" id={name} name={name} rows={rows || 0} onChange={onChange}></textarea>
     </>
   );
 };

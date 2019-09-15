@@ -9,7 +9,7 @@ const ContactsViewTable = ({ data, onDelete }) => {
   if (!(data && data.length)) return null;
 
   const capitalizeFirstLetter = lowerString => `${lowerString.charAt(0).toUpperCase()}${lowerString.substring(1)}`;
-  const [_id, ...columnKeys] = Object.keys(data[0]);
+  const columnKeys = Object.keys(data[0]).filter(key => key !== '_id');
 
   const columnConfig = [];
   const columnKeysConfig = columnKeys.map(key => {

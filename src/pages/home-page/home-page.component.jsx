@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './home-page.styles.css';
 
-import { getLabelsWithCount } from '../../modal/contact-labels';
+import { getLabelsWithCount, decrementLabelCount } from '../../modal/contact-labels';
 import { getContacts, deleteContact } from '../../modal/contact-data';
 
 import TagList from '../../components/tag-list/tag-list.component';
@@ -22,7 +22,8 @@ class HomePage extends Component {
     let contacts = [...this.state.contacts];
     contacts = contacts.filter(c => c._id !== contact._id);
     deleteContact(contact);
-    this.setState({ contacts });
+    decrementLabelCount(contact.label);
+    this.setState({ contacts, tagList: getLabelsWithCount() });
   };
 
   render() {

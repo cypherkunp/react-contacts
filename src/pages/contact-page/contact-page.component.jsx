@@ -3,7 +3,8 @@ import Joi from 'joi-browser';
 import shortId from 'shortid';
 
 import { saveContact } from '../../modal/contact-data';
-import { concat } from 'rxjs';
+import { incrementLabelCount } from './../../modal/contact-labels';
+
 import ContactForm from '../../components/contact-form/contact-form.component';
 
 class ContactPage extends Component {
@@ -63,9 +64,10 @@ class ContactPage extends Component {
     if (errors) return;
 
     const contactWithId = { ...this.state.contact };
-    concat._id = shortId.generate();
+    contactWithId._id = shortId.generate();
 
     saveContact(contactWithId);
+    incrementLabelCount(contactWithId.label);
 
     this.props.history.push('/');
   };

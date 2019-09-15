@@ -7,17 +7,14 @@ import './app-header.styles.css';
 
 const AppHeader = ({ currentUser }) => {
   return (
-    <div className="navbar navbar-dark bg-dark app-header">
+    <div className="navbar navbar-dark bg-primary app-header">
       <Link className="navbar-brand" to="/">
         <FontAwesomeIcon icon={faAddressBook} style={{ color: 'white', height: 32, width: 32 }} />
       </Link>
-
-      <div className="app-user-info">Welcome, Devvrat Shukla</div>
-
       <div className="app-user-options">
         {currentUser ? (
           <React.Fragment>
-            <span>Welcome, Devvrat</span>
+            <span>Welcome, {currentUser}</span>
             <button type="button" className="btn btn-grey">
               Sign Out
             </button>

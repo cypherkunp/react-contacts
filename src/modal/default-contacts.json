@@ -1,22 +1,22 @@
 [
   {
     "_id": "1",
-    "name": "Devvrat Shukla",
-    "address": "New Kalyani Nagar",
-    "email": "devvratshukla@gmail.com",
-    "website": "devvratshukla.github.io",
-    "phone": "9890763747",
-    "company": "PTC Inc",
+    "name": "Jack Dorsey",
+    "address": "Los Angeles",
+    "email": "jackdorsey@gmail.com",
+    "website": "jackdorsey.github.io",
+    "phone": "999999999",
+    "company": "Twitter Inc",
     "notes": "Notes",
     "label": "Friend"
   },
   {
     "_id": "2",
     "name": "Steve Jobs",
-    "address": "New Kalyani Nagar",
+    "address": "Los Altos, California",
     "email": "stevejobs@gmail.com",
     "website": "stevejobs.github.io",
-    "phone": "9890763747",
+    "phone": "9999999999",
     "company": "Apple Inc",
     "notes": "Notes",
     "label": "Family"
@@ -24,10 +24,10 @@
   {
     "_id": "3",
     "name": "Steve Woz",
-    "address": "New Kalyani Nagar",
+    "address": "Los Gatos, California",
     "email": "stevewoz@gmail.com",
     "website": "stevewoz.github.io",
-    "phone": "9890763747",
+    "phone": "888888888",
     "company": "Apple Inc",
     "notes": "Notes",
     "label": "Colleague"
@@ -35,10 +35,10 @@
   {
     "_id": "4",
     "name": "Bill Gates",
-    "address": "New Kalyani Nagar",
+    "address": "New York",
     "email": "billgates@gmail.com",
     "website": "billgates.github.io",
-    "phone": "9890763747",
+    "phone": "6666666666",
     "company": "Microsoft Inc",
     "notes": "Notes",
     "label": "Acquaintance"
